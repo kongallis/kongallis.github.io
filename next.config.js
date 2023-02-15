@@ -1,7 +1,8 @@
-const isGithubActions = process.env.GITHUB_ACTIONS || false
+const repo = 'kongallis.github.io'
+const assetPrefix = `/${repo}/`
+const basePath = `/${repo}`
 
-let assetPrefix = ''
-let basePath = '/'
+const isGithubActions = process.env.GITHUB_ACTIONS || false
 
 if (isGithubActions) {
   // trim off `<owner>/`
