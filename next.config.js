@@ -1,11 +1,9 @@
-const repo = 'kongallis.github.io'
-const assetPrefix = `/${repo}/`
-const basePath = `/${repo}`
-
 const isGithubActions = process.env.GITHUB_ACTIONS || false
 
+let assetPrefix = ''
+let basePath = '/'
+
 if (isGithubActions) {
-  // trim off `<owner>/`
   const repo = process.env.GITHUB_REPOSITORY.replace(/.*?\//, '')
 
   assetPrefix = `/${repo}/`
@@ -17,6 +15,6 @@ module.exports = {
   basePath: basePath,
   images: {
     loader: 'imgix',
-    path: '/public',
+    path: 'the "domain" of your Imigix source',
   },
 }
