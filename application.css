@@ -563,6 +563,7 @@ a:focus {
   max-width: 100%;
   height: auto;
   width: 300px;
+  border-radius: 50%;
 }
 
 .elsewhere {
